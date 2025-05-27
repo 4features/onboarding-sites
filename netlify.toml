@@ -1,22 +1,22 @@
-# Global settings (if needed)
-[build]
-  publish = "jasmine"
-  command = ""
+# Minimal netlify.toml
+# We no longer define a global [build] block here
+# so each Netlify project can set its own Publish directory (jasmine, taxoffice, 4features)
 
-# Jasmine site deploy
+# Example: if you want redirects on all projects, you can still define them here:
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
 
-# Context: TaxOffice site
-[context.taxoffice]
-  [context.taxoffice.build]
-    publish = "taxoffice"
-    command = ""
+# You can later add per-project context if needed:
+# [context.production]
+#   command = ""
+#   publish = "jasmine"
 
-# Context: 4Features site
-[context.4features]
-  [context.4features.build]
-    publish = "4features"
-    command = ""
+# [context.taxoffice]
+#   command = ""
+#   publish = "taxoffice"
+
+# [context.4features]
+#   command = ""
+#   publish = "4features"
