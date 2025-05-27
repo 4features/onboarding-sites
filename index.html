@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jasmine Onboarding</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header id="sticky-header">
+  <nav>
+    <a href="#hero">Home</a>
+    <a href="#business-profile">Business Info</a>
+    <a href="#rep-info">Authorized Rep</a>
+    <a href="#messaging-compliance">Messaging Compliance</a>
+    <a href="#jasmine-setup">Jasmine Setup</a>
+    <a href="#next-steps">Next Steps</a>
+  </nav>
+</header>
+
+<section id="hero">
+  <h1>Jasmine: The scent of freedom from voicemail.</h1>
+  <p>Let’s get you live. We just need a few quick details.</p>
+  <button id="start-onboarding-btn">Start Onboarding</button>
+</section>
+
+<form id="business-info-form" enctype="multipart/form-data">
+  <!-- Section 1: Business Profile -->
+  <section id="business-profile">
+    <h2>1. Business Profile</h2>
+    <div><label>Legal Business Name*</label><input type="text" name="legal_business_name" required></div>
+    <div><label>DBA Name</label><input type="text" name="dba_name" placeholder="If different from legal name"></div>
+    <div><label>Business Type*</label><input type="text" name="business_type" required placeholder="LLC, Corporation, etc."></div>
+    <div><label>EIN*</label><input type="text" name="ein" placeholder="XX-XXXXXXX" required></div>
+    <div><label>Year Established*</label><input type="number" name="year_established" required placeholder="e.g., 2019"></div>
+    <div><label>Stock Symbol</label><input type="text" name="stock_symbol" placeholder="If public"></div>
+    <div><label>Website URL</label><input type="url" name="website_url"></div>
+    <div><label>Upload Logo</label><input type="file" name="logo_upload" accept="image/*"></div>
+    <div><label>Physical Address*</label><input type="text" name="physical_address" required placeholder="Must match EIN address"></div>
+    <div><label>Business Phone*</label><input type="tel" name="business_phone" required></div>
+    <div><label>Business Email*</label><input type="email" name="business_email" required></div>
+  </section>
+
+  <!-- Section 2: Authorized Representative -->
+  <section id="rep-info">
+    <h2>2. Authorized Representative</h2>
+    <div><label>Full Name*</label><input type="text" name="rep_name" required></div>
+    <div><label>Email Address*</label><input type="email" name="rep_email" required></div>
+    <div><label>Phone Number*</label><input type="tel" name="rep_phone" required></div>
+  </section>
+
+  <!-- Section 3: Messaging Compliance -->
+  <section id="messaging-compliance">
+    <h2>3. Messaging Compliance</h2>
+    <div><label>Privacy Policy URL</label><input type="url" name="privacy_policy_url" placeholder="Link or leave blank to generate"></div>
+    <div><label>Terms of Use URL</label><input type="url" name="terms_of_use_url" placeholder="Link or leave blank to generate"></div>
+    <div>
+      <label>Messaging Use Case(s)*</label>
+      <small>Select all that apply</small>
+      <div><input type="checkbox" name="use_case" value="Marketing"> Marketing</div>
+      <div><input type="checkbox" name="use_case" value="Customer Care"> Customer Care</div>
+      <div><input type="checkbox" name="use_case" value="OTP"> One-Time Passwords (OTP)</div>
+    </div>
+    <div><label>Estimated Monthly Message Volume*</label><input type="number" name="msg_volume" required placeholder="e.g. 1000"></div>
+  </section>
+
+  <!-- Section 4: Jasmine Setup -->
+  <section id="jasmine-setup">
+    <h2>4. Jasmine Setup Preferences</h2>
+    <div><label>Greeting Style*</label>
+      <select name="greeting_style" required>
+        <option value="">Select</option>
+        <option value="friendly">Friendly</option>
+        <option value="professional">Professional</option>
+        <option value="bilingual">Bilingual</option>
+        <option value="custom">Custom</option>
+      </select>
+    </div>
+    <div><label>Custom Greeting</label><textarea name="greeting_preference" rows="3"></textarea></div>
+    <div><label>Languages Spoken*</label><input type="text" name="languages_spoken" required></div>
+    <div><label>Escalation Types</label><input type="text" name="escalate_caller_types" placeholder="e.g., emergencies, media inquiries"></div>
+    <div><label>Calendar Link*</label><input type="url" name="calendar_link" required></div>
+    <div><label>Follow-up Contact Name*</label><input type="text" name="follow_up_name" required></div>
+    <div><label>Follow-up Contact Email*</label><input type="email" name="follow_up_email" required></div>
+  </section>
+</form>
+
+<!-- Section 5: Next Steps -->
+<section id="next-steps">
+  <h2>5. Next Steps</h2>
+  <div id="submission-confirmation" style="display:none;">
+    <p>Thank you! Your information has been submitted successfully.</p>
+  </div>
+
+  <div id="calendar-embed" style="display:none;">
+    <iframe src="https://link.4features.com/widget/booking/REwSvoHUcYckOWAlFBBw"
+            style="width:100%; height:700px; border:none;" scrolling="no"></iframe>
+    <script src="https://link.4features.com/js/form_embed.js" type="text/javascript"></script>
+  </div>
+
+  <button type="submit" form="business-info-form" id="submit-all-forms-btn">Submit Information</button>
+</section>
+
+<footer>
+  <div style="text-align:center; padding:20px;">
+    <img src="images/jasmine-logo-placeholder.png" alt="Jasmine Logo" style="max-width:100px; margin: 0 auto; display: block;">
+    <p>Powered by 4Features</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
