@@ -3,8 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jasmine Onboarding</title>
+  <title>Jasmine Onboarding | 4Features</title>
+  <meta name="description" content="Jasmine: Your 24/7 AI answering assistant, powered by 4Features. Complete your onboarding to get started today." />
   <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .success-box {
+      background-color: #d4edda;
+      color: #155724;
+      padding: 15px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      border: 1px solid #c3e6cb;
+      text-align: center;
+    }
+    @media (max-width: 600px) {
+      iframe {
+        height: auto !important;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -34,7 +51,10 @@
     </iframe>
   </div>
 
-  <button id="start-onboarding-btn">Start Onboarding</button>
+  <!-- Clear CTA to Start Onboarding -->
+  <div style="text-align: center; margin-top: 20px;">
+    <button id="start-onboarding-btn" style="font-size: 1.2em; padding: 12px 30px;">Let’s Get You Live → Start Onboarding</button>
+  </div>
 </section>
 
 <form id="business-info-form" enctype="multipart/form-data">
@@ -101,8 +121,9 @@
 <!-- Section 5: Next Steps -->
 <section id="next-steps">
   <h2>5. Next Steps</h2>
-  <div id="submission-confirmation" style="display:none;">
-    <p>Thank you! Your information has been submitted successfully.</p>
+  <div id="submission-confirmation" class="success-box" style="display:none;">
+    <p>✅ Thank you! Your information has been submitted successfully.</p>
+    <p>🎉 Next → Book your onboarding call below!</p>
   </div>
 
   <div id="calendar-embed" style="display:none;">
