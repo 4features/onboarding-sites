@@ -1,0 +1,22 @@
+# Global settings (if needed)
+[build]
+  publish = "jasmine"
+  command = ""
+
+# Jasmine site deploy
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+# Context: TaxOffice site
+[context.taxoffice]
+  [context.taxoffice.build]
+    publish = "taxoffice"
+    command = ""
+
+# Context: 4Features site
+[context.4features]
+  [context.4features.build]
+    publish = "4features"
+    command = ""
