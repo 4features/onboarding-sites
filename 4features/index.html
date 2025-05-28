@@ -43,13 +43,13 @@
   <section id="business-profile">
     <h2>1. Business Profile</h2>
     <div><label>Legal Business Name*</label><input type="text" name="legal_business_name" required></div>
-    <div><label>DBA Name</label><input type="text" name="dba_name" placeholder="If different from legal name"></div>
-    <div><label>Business Type*</label><input type="text" name="business_type" required placeholder="LLC, Corporation, etc."></div>
-    <div><label>EIN*</label><input type="text" name="ein" placeholder="XX-XXXXXXX" required></div>
-    <div><label>Year Established*</label><input type="number" name="year_established" required placeholder="e.g., 2019"></div>
-    <div><label>Website URL</label><input type="text" name="website_url" placeholder="Paste your website or leave blank"></div>
+    <div><label>DBA Name</label><input type="text" name="dba_name"></div>
+    <div><label>Business Type*</label><input type="text" name="business_type" required></div>
+    <div><label>EIN*</label><input type="text" name="ein" required></div>
+    <div><label>Year Established*</label><input type="number" name="year_established" required></div>
+    <div><label>Website URL</label><input type="text" name="website_url" placeholder="www.yourdomain.com"></div>
     <div><label>Upload Logo</label><input type="file" name="logo_upload" accept="image/*"></div>
-    <div><label>Physical Address*</label><input type="text" name="physical_address" required placeholder="Must match EIN address"></div>
+    <div><label>Physical Address*</label><input type="text" name="physical_address" required></div>
     <div><label>Business Phone*</label><input type="tel" name="business_phone" required></div>
     <div><label>Business Email*</label><input type="email" name="business_email" required></div>
   </section>
@@ -65,8 +65,9 @@
   <!-- Section 3: Messaging Compliance -->
   <section id="messaging-compliance">
     <h2>3. Messaging Compliance</h2>
-    <div><label>Privacy Policy URL</label><input type="text" name="privacy_policy_url" placeholder="Link or leave blank to generate"></div>
-    <div><label>Terms of Use URL</label><input type="text" name="terms_of_use_url" placeholder="Link or leave blank to generate"></div>
+    <div><label>Privacy Policy URL</label><input type="text" name="privacy_policy_url"></div>
+    <div><label>Terms of Use URL</label><input type="text" name="terms_of_use_url"></div>
+    <div><label>Estimated Monthly Message Volume*</label><input type="number" name="msg_volume" required></div>
     <div>
       <label>Messaging Use Case(s)*</label>
       <small>Select all that apply</small>
@@ -74,7 +75,6 @@
       <div><input type="checkbox" name="use_case" value="Customer Care"> Customer Care</div>
       <div><input type="checkbox" name="use_case" value="OTP"> One-Time Passwords (OTP)</div>
     </div>
-    <div><label>Estimated Monthly Message Volume*</label><input type="number" name="msg_volume" required placeholder="e.g. 1000"></div>
   </section>
 
   <!-- Section 4: Setup Preferences -->
@@ -89,8 +89,8 @@
       </select>
     </div>
     <div><label>Languages Spoken*</label><input type="text" name="languages_spoken" required></div>
-    <div><label>Escalation Types</label><input type="text" name="escalate_caller_types" placeholder="e.g., emergencies, media inquiries"></div>
-    <div><label>Calendar Link*</label><input type="text" name="calendar_link" required placeholder="Paste your calendar link or type 'none available'"></div>
+    <div><label>Escalation Types</label><input type="text" name="escalate_caller_types"></div>
+    <div><label>Calendar Link*</label><input type="text" name="calendar_link" required></div>
     <div><label>Follow-up Contact Name*</label><input type="text" name="follow_up_name" required></div>
     <div><label>Follow-up Contact Email*</label><input type="email" name="follow_up_email" required></div>
   </section>
@@ -99,13 +99,11 @@
 <section id="next-steps">
   <h2>5. Next Steps</h2>
   <div id="submission-confirmation" style="display:none;">
-    <p>✅ Thank you! Your information has been submitted successfully.</p>
-    <p>🎉 Next → Book your onboarding call below!</p>
+    <p>Thank you! Your information has been submitted successfully. We’ll follow up shortly to launch your setup.</p>
   </div>
 
   <div id="calendar-embed" style="display:none;">
-    <iframe src="https://link.4features.com/widget/booking/REwSvoHUcYckOWAlFBBw"
-            style="width:100%; height:700px; border:none;" scrolling="no"></iframe>
+    <iframe src="https://link.4features.com/widget/booking/P9atcIGANU9Uxj0sksB7" style="width: 100%;border:none;overflow: hidden;" scrolling="no" id="oQyUQN0Bu32QFezPn73G_1748447902540"></iframe>
     <script src="https://link.4features.com/js/form_embed.js" type="text/javascript"></script>
   </div>
 
