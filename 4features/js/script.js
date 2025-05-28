@@ -70,10 +70,10 @@ document.addEventListener("DOMContentLoaded", function () {
         formData.append("use_case[]", checkbox.value);
       });
 
-      // Append logo if provided
-      const logoFile = businessInfoForm.querySelector("input[name='logo_upload']")?.files[0];
-      if (logoFile) {
-        formData.append("logo_upload", logoFile);
+      // Safely append logo if provided
+      const logoInput = businessInfoForm.querySelector("input[name='logo_upload']");
+      if (logoInput && logoInput.files.length > 0) {
+        formData.append("logo_upload", logoInput.files[0]);
       }
 
       fetch("https://connect.pabbly.com/workflow/sendwebhookfiledata/IjU3NmQwNTY5MDYzNjA0M2Q1MjZjIg_3D_3D_pc/IjU3NjYwNTZiMDYzNjA0MzI1MjZjNTUzMDUxMzMi_pc", {
