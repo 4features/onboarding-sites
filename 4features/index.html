@@ -47,7 +47,7 @@
     <div><label>Business Type*</label><input type="text" name="business_type" required placeholder="LLC, Corporation, etc."></div>
     <div><label>EIN*</label><input type="text" name="ein" placeholder="XX-XXXXXXX" required></div>
     <div><label>Year Established*</label><input type="number" name="year_established" required placeholder="e.g., 2019"></div>
-    <div><label>Website URL</label><input type="url" name="website_url"></div>
+    <div><label>Website URL</label><input type="text" name="website_url" placeholder="Paste your website or leave blank"></div>
     <div><label>Upload Logo</label><input type="file" name="logo_upload" accept="image/*"></div>
     <div><label>Physical Address*</label><input type="text" name="physical_address" required placeholder="Must match EIN address"></div>
     <div><label>Business Phone*</label><input type="tel" name="business_phone" required></div>
@@ -65,8 +65,8 @@
   <!-- Section 3: Messaging Compliance -->
   <section id="messaging-compliance">
     <h2>3. Messaging Compliance</h2>
-    <div><label>Privacy Policy URL</label><input type="url" name="privacy_policy_url" placeholder="Link or leave blank to generate"></div>
-    <div><label>Terms of Use URL</label><input type="url" name="terms_of_use_url" placeholder="Link or leave blank to generate"></div>
+    <div><label>Privacy Policy URL</label><input type="text" name="privacy_policy_url" placeholder="Link or leave blank to generate"></div>
+    <div><label>Terms of Use URL</label><input type="text" name="terms_of_use_url" placeholder="Link or leave blank to generate"></div>
     <div>
       <label>Messaging Use Case(s)*</label>
       <small>Select all that apply</small>
@@ -90,7 +90,7 @@
     </div>
     <div><label>Languages Spoken*</label><input type="text" name="languages_spoken" required></div>
     <div><label>Escalation Types</label><input type="text" name="escalate_caller_types" placeholder="e.g., emergencies, media inquiries"></div>
-    <div><label>Calendar Link*</label><input type="url" name="calendar_link" required></div>
+    <div><label>Calendar Link*</label><input type="text" name="calendar_link" required placeholder="Paste your calendar link or type 'none available'"></div>
     <div><label>Follow-up Contact Name*</label><input type="text" name="follow_up_name" required></div>
     <div><label>Follow-up Contact Email*</label><input type="email" name="follow_up_email" required></div>
   </section>
