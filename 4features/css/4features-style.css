@@ -108,10 +108,10 @@ section {
     padding-bottom: 60px;
     background-color: #FFE5EA; /* Light red/pink accent */
 }
-
+/* Hero Section Adjustment */
 #hero h1 {
-    font-size: 2.5em;
-    margin-bottom: 0.5em;
+    font-size: 2.2em; /* slightly smaller to avoid odd wrapping */
+    line-height: 1.2;
 }
 
 #hero p {

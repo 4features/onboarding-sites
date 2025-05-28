@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
         formData.append("logo_upload", logoFile);
       }
 
-      fetch("https://connect.pabbly.com/workflow/sendwebhookfiledata/IjU3NmQwNTY5MDYzNjA0M2Q1MjZjIg_3D_3D_pc/IjU3NjYwNTY4MDYzMTA0MzE1MjZlNTUzNDUxMzMi_pc", {
+      fetch("https://connect.pabbly.com/workflow/sendwebhookfiledata/IjU3NmQwNTY5MDYzNjA0M2Q1MjZjIg_3D_3D_pc/IjU3NjYwNTZiMDYzNjA0MzI1MjZjNTUzMDUxMzMi_pc", {
         method: "POST",
         body: formData,
       })
