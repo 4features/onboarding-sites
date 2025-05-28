@@ -1,57 +1,294 @@
+/******************************************/
+/* Basic Styles & Branding                */
+/******************************************/
+
 body {
-  font-family: sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FAFAFA;
+    color: #333;
+    line-height: 1.6;
 }
 
-h1, h2 {
-  color: #C8102E; /* 4Features Red */
+h1, h2, h3 {
+    color: #FF0037; /* 4Features red for headings */
 }
 
-nav a {
-  color: #C8102E;
-  text-decoration: none;
-  margin-right: 15px;
+a {
+    color: #FF0037;
+    text-decoration: none;
 }
 
-nav a:hover {
-  text-decoration: underline;
+a:hover {
+    text-decoration: underline;
 }
 
-button, #submit-all-forms-btn, #start-onboarding-btn {
-  background-color: #C8102E;
-  color: #fff;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 4px;
-  cursor: pointer;
+button {
+    background-color: #FF0037; /* Primary red */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-button:hover, #submit-all-forms-btn:hover, #start-onboarding-btn:hover {
-  background-color: #A00D24;
+button:hover {
+    background-color: #cc002c; /* Darker red on hover */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+small {
+    display: block;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    font-size: 0.85em;
+    color: #666;
 }
 
 section {
-  margin-bottom: 40px;
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
-input, textarea, select {
-  width: 100%;
-  padding: 8px;
-  margin-top: 4px;
-  margin-bottom: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+/******************************************/
+/* Header & Navigation                    */
+/******************************************/
+
+#sticky-header {
+    background-color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+#sticky-header nav a {
+    margin: 0 15px;
+    font-weight: 500;
+    color: #333;
+}
+
+#sticky-header nav a:hover {
+    color: #FF0037;
+}
+
+/******************************************/
+/* Hero Section                           */
+/******************************************/
+
+#hero {
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #FFE5EA; /* Light red/pink accent */
+}
+
+#hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+#hero p {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+}
+
+#start-onboarding-btn {
+    font-size: 1.2em;
+    padding: 12px 25px;
+}
+
+/******************************************/
+/* Form Sections                          */
+/******************************************/
+
+#business-profile,
+#rep-info,
+#messaging-compliance,
+#setup {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+
+form div {
+    margin-bottom: 20px;
+}
+
+input[type="checkbox"] {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+input[type="checkbox"] + label {
+    display: inline-block;
+    font-weight: normal;
+}
+
+/******************************************/
+/* Next Steps Section                     */
+/******************************************/
+
+#next-steps {
+    text-align: center;
+}
+
+#submission-confirmation {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #c3e6cb;
+}
+
+#calendar-embed {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+#calendar-embed a {
+    display: inline-block;
+    background-color: #FF0037;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#calendar-embed a:hover {
+    background-color: #cc002c;
+}
+
+#submit-all-forms-btn {
+    font-size: 1.1em;
+    padding: 12px 30px;
+    margin-top: 20px;
+    background-color: #FFE5EA;
+    color: #FF0037;
+}
+
+#submit-all-forms-btn:hover {
+    background-color: #f5c2c7;
+}
+
+/******************************************/
+/* Footer                                 */
+/******************************************/
+
+footer {
+    background-color: #333;
+    color: #FAFAFA;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
 }
 
 footer img {
-  margin-top: 10px;
+    max-width: 100px;
+    margin-bottom: 10px;
 }
 
-.success-message {
-  background-color: #d4edda;
-  color: #155724;
-  padding: 10px;
-  border-radius: 4px;
-  margin-bottom: 20px;
+footer p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+footer nav a {
+    color: #FFE5EA;
+    margin: 0 10px;
+}
+
+/******************************************/
+/* Responsive Design                      */
+/******************************************/
+
+@media (max-width: 768px) {
+    #sticky-header nav a {
+        margin: 0 10px;
+        font-size: 0.9em;
+    }
+
+    #hero h1 {
+        font-size: 2em;
+    }
+
+    #hero p {
+        font-size: 1em;
+    }
+
+    section {
+        padding: 30px 15px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="url"],
+    textarea,
+    select {
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 480px) {
+    #sticky-header {
+        padding: 5px 0;
+    }
+    #sticky-header nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #sticky-header nav a {
+        padding: 8px 0;
+        border-bottom: 1px solid #eee;
+    }
+    #sticky-header nav a:last-child {
+        border-bottom: none;
+    }
+
+    #hero h1 {
+        font-size: 1.8em;
+    }
+
+    #hero p {
+        font-size: 0.9em;
+    }
+
+    button, #start-onboarding-btn, #submit-all-forms-btn {
+        width: 100%;
+        padding: 12px 0;
+    }
 }
