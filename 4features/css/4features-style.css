@@ -1,0 +1,57 @@
+body {
+  font-family: sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+h1, h2 {
+  color: #C8102E; /* 4Features Red */
+}
+
+nav a {
+  color: #C8102E;
+  text-decoration: none;
+  margin-right: 15px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+button, #submit-all-forms-btn, #start-onboarding-btn {
+  background-color: #C8102E;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover, #submit-all-forms-btn:hover, #start-onboarding-btn:hover {
+  background-color: #A00D24;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+footer img {
+  margin-top: 10px;
+}
+
+.success-message {
+  background-color: #d4edda;
+  color: #155724;
+  padding: 10px;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
