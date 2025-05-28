@@ -1,4 +1,3 @@
-
 document.addEventListener("DOMContentLoaded", function () {
   const startOnboardingBtn = document.getElementById("start-onboarding-btn");
   const a2pFormSection = document.getElementById("business-profile");
@@ -34,11 +33,10 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   const businessInfoForm = document.getElementById("business-info-form");
-  const submitAllFormsBtn = document.getElementById("submit-all-forms-btn");
   const submissionConfirmation = document.getElementById("submission-confirmation");
 
-  if (submitAllFormsBtn && businessInfoForm && submissionConfirmation) {
-    submitAllFormsBtn.addEventListener("click", function (event) {
+  if (businessInfoForm && submissionConfirmation) {
+    businessInfoForm.addEventListener("submit", function (event) {
       event.preventDefault();
 
       let isValid = true;
@@ -73,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       // Append logo if provided
-      const logoFile = businessInfoForm.querySelector("input[name='logo_upload']").files[0];
+      const logoFile = businessInfoForm.querySelector("input[name='logo_upload']")?.files[0];
       if (logoFile) {
         formData.append("logo_upload", logoFile);
       }
