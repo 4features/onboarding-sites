@@ -1,5 +1,92 @@
 <!DOCTYPE html>
-<html>
-<head><title>4Features Onboarding</title></head>
-<body><h1>Coming Soon: 4Features Onboarding Page</h1></body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>4Features Onboarding</title>
+  <meta name="description" content="Welcome to 4Features! Complete your onboarding to unlock automation, reputation campaigns, and smart client handling." />
+  <link rel="stylesheet" href="css/4features-style.css" />
+</head>
+<body>
+
+<header id="sticky-header">
+  <nav>
+    <a href="#hero">Home</a>
+    <a href="#business-profile">Business Info</a>
+    <a href="#rep-info">Authorized Rep</a>
+    <a href="#messaging-compliance">Messaging Compliance</a>
+    <a href="#setup">Setup</a>
+    <a href="#next-steps">Next Steps</a>
+  </nav>
+</header>
+
+<section id="hero">
+  <h1>4Features: Smarter Systems, Stronger Growth.</h1>
+  <p>Let’s get your automation and reputation campaigns live. We just need a few details to get started.</p>
+
+  <!-- Embedded 4Features Welcome Loom Video -->
+  <div style="position: relative; padding-bottom: 56.25%; height: 0; margin-bottom: 20px;">
+    <iframe src="https://www.loom.com/embed/2725d1ae23f542fcbe3c7d674c98328d?sid=62bee18e-1d49-453e-8420-c0e9e3660403"
+            frameborder="0"
+            webkitallowfullscreen
+            mozallowfullscreen
+            allowfullscreen
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 8px;">
+    </iframe>
+  </div>
+
+  <button id="start-onboarding-btn">Start Onboarding</button>
+</section>
+
+<form id="business-info-form" enctype="multipart/form-data">
+  <!-- Section 1: Business Profile -->
+  <section id="business-profile">
+    <h2>1. Business Profile</h2>
+    <!-- (same fields) -->
+  </section>
+
+  <!-- Section 2: Authorized Representative -->
+  <section id="rep-info">
+    <h2>2. Authorized Representative</h2>
+    <!-- (same fields) -->
+  </section>
+
+  <!-- Section 3: Messaging Compliance -->
+  <section id="messaging-compliance">
+    <h2>3. Messaging Compliance</h2>
+    <!-- (same fields) -->
+  </section>
+
+  <!-- Section 4: Setup Preferences -->
+  <section id="setup">
+    <h2>4. Setup Preferences</h2>
+    <!-- (same fields) -->
+  </section>
+</form>
+
+<!-- Section 5: Next Steps -->
+<section id="next-steps">
+  <h2>5. Next Steps</h2>
+  <div id="submission-confirmation" style="display:none;">
+    <p>Thank you! Your information has been submitted successfully. We’ll follow up shortly to launch your setup.</p>
+  </div>
+
+  <div id="calendar-embed" style="display:none;">
+    <iframe src="https://link.4features.com/widget/booking/REwSvoHUcYckOWAlFBBw"
+            style="width:100%; height:700px; border:none;" scrolling="no"></iframe>
+    <script src="https://link.4features.com/js/form_embed.js" type="text/javascript"></script>
+  </div>
+
+  <button type="submit" form="business-info-form" id="submit-all-forms-btn">Submit Information</button>
+</section>
+
+<footer>
+  <div style="text-align:center; padding:20px;">
+    <img src="images/4F_Red slot_transparent_proportioned.png" alt="4Features Logo" style="max-width:100px; margin: 0 auto; display: block;">
+    <p>Powered by 4Features</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
 </html>
