@@ -1,0 +1,299 @@
+/******************************************/
+/* Basic Styles & Branding                */
+/******************************************/
+
+body {
+    font-family: 'Inter', 'Helvetica Neue', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FAFAFA; /* Light neutral background */
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #5C5470; /* Deep lavender-gray for headings */
+}
+
+a {
+    color: #5C5470;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background-color: #5C5470; /* Primary color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #4a435a; /* Darker shade of primary */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+small {
+    display: block;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    font-size: 0.85em;
+    color: #666;
+}
+
+section {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/******************************************/
+/* Header & Navigation                    */
+/******************************************/
+
+#sticky-header {
+    background-color: #fff; /* White background for header */
+    padding: 10px 0;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+#sticky-header nav a {
+    margin: 0 15px;
+    font-weight: 500;
+}
+
+/******************************************/
+/* Hero Section                           */
+/******************************************/
+
+#hero {
+    text-align: center;
+    padding-top: 60px; /* Adjust if header height changes */
+    padding-bottom: 60px;
+    background-color: #E9D5DA; /* Light blush accent for hero */
+}
+
+#hero h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+#hero p {
+    font-size: 1.2em;
+    margin-bottom: 1.5em;
+}
+
+#start-onboarding-btn {
+    font-size: 1.2em;
+    padding: 12px 25px;
+}
+
+/******************************************/
+/* Form Sections                          */
+/******************************************/
+
+#a2p-form, #jasmine-setup {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#a2p-form h2, #jasmine-setup h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+form div {
+    margin-bottom: 20px;
+}
+
+form div div {
+    margin-left: 20px; /* Indent policy URL fields */
+    margin-top: 5px;
+}
+
+input[type="checkbox"] {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+input[type="checkbox"] + label {
+    display: inline-block;
+    font-weight: normal;
+}
+
+/******************************************/
+/* Next Steps Section                     */
+/******************************************/
+
+#next-steps {
+    text-align: center;
+}
+
+#submission-confirmation {
+    background-color: #d4edda; /* Success green */
+    color: #155724;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    border: 1px solid #c3e6cb;
+}
+
+#calendar-embed {
+    margin: 30px 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+}
+
+#calendar-embed a {
+    display: inline-block;
+    background-color: #5C5470;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#calendar-embed a:hover {
+    background-color: #4a435a;
+}
+
+#submit-all-forms-btn {
+    font-size: 1.1em;
+    padding: 12px 30px;
+    margin-top: 20px;
+    background-color: #E9D5DA; /* Accent color for final submit */
+    color: #5C5470;
+}
+
+#submit-all-forms-btn:hover {
+    background-color: #d1b7be;
+}
+
+/******************************************/
+/* Footer                                 */
+/******************************************/
+
+footer {
+    background-color: #333;
+    color: #FAFAFA;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+#footer-logo {
+    max-width: 100px; /* Adjust as needed */
+    margin-bottom: 10px;
+    background-color: #777; /* Placeholder background */
+    padding: 5px;
+    border-radius: 3px;
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+footer nav a {
+    color: #E9D5DA; /* Light blush for footer links */
+    margin: 0 10px;
+}
+
+/******************************************/
+/* Responsive Design                      */
+/******************************************/
+
+@media (max-width: 768px) {
+    #sticky-header nav a {
+        margin: 0 10px;
+        font-size: 0.9em;
+    }
+
+    #hero h1 {
+        font-size: 2em;
+    }
+
+    #hero p {
+        font-size: 1em;
+    }
+
+    section {
+        padding: 30px 15px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="url"],
+    textarea,
+    select {
+        font-size: 0.95em;
+    }
+}
+
+@media (max-width: 480px) {
+    #sticky-header {
+        padding: 5px 0;
+    }
+    #sticky-header nav {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #sticky-header nav a {
+        padding: 8px 0;
+        border-bottom: 1px solid #eee;
+    }
+    #sticky-header nav a:last-child {
+        border-bottom: none;
+    }
+
+    #hero h1 {
+        font-size: 1.8em;
+    }
+
+    #hero p {
+        font-size: 0.9em;
+    }
+
+    button, #start-onboarding-btn, #submit-all-forms-btn {
+        width: 100%;
+        padding: 12px 0;
+    }
+}
+

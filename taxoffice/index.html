@@ -1,5 +1,157 @@
 <!DOCTYPE html>
-<html>
-<head><title>TaxOffice Onboarding</title></head>
-<body><h1>Coming Soon: TaxOffice Onboarding Page</h1></body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TaxOffice.AI Onboarding | Powered by 4Features</title>
+  <meta name="description" content="TaxOffice.AI: Your complete tax practice automation platform. Complete your onboarding to get started today." />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .success-box {
+      background-color: #d4edda;
+      color: #155724;
+      padding: 15px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      border: 1px solid #c3e6cb;
+      text-align: center;
+    }
+    @media (max-width: 600px) {
+      iframe {
+        height: auto !important;
+      }
+    }
+  </style>
+<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+<header id="sticky-header">
+  <nav>
+    <a href="#hero">Home</a>
+    <a href="#business-profile">Business Info</a>
+    <a href="#rep-info">Authorized Rep</a>
+    <a href="#messaging-compliance">Messaging Compliance</a>
+    <a href="#platform-setup">Platform Setup</a>
+    <a href="#next-steps">Next Steps</a>
+  </nav>
+</header>
+
+<section id="hero">
+  <h1>TaxOffice.AI: Your practice runs itself.</h1>
+  <p>Let's get you live. We just need a few quick details.</p>
+
+  <!-- Embedded TaxOffice.AI Welcome Video -->
+  <div style="position: relative; padding-bottom: 56.25%; height: 0; margin-bottom: 20px;">
+    <iframe src="https://www.loom.com/embed/3e5a45c659a5451683eacdaf38fb48e1?sid=b8481363-5f45-4950-8e56-43d48a92d5fc"
+            frameborder="0"
+            webkitallowfullscreen
+            mozallowfullscreen
+            allowfullscreen
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 8px;">
+    </iframe>
+  </div>
+
+  <!-- Clear CTA to Start Onboarding -->
+  <div style="text-align: center; margin-top: 20px;">
+    <button id="start-onboarding-btn" style="font-size: 1.2em; padding: 12px 30px;">Let's Get You Live → Start Onboarding</button>
+  </div>
+</section>
+
+<form id="business-info-form" enctype="multipart/form-data">
+  <!-- Section 1: Business Profile -->
+  <section id="business-profile">
+    <h2>1. Business Profile</h2>
+    <div><label>Legal Business Name*</label><input type="text" name="legal_business_name" required></div>
+    <div><label>DBA Name</label><input type="text" name="dba_name" placeholder="If different from legal name"></div>
+    <div><label>Business Type*</label><input type="text" name="business_type" required placeholder="LLC, Corporation, etc."></div>
+    <div><label>EIN*</label><input type="text" name="ein" placeholder="XX-XXXXXXX" required></div>
+    <div><label>Year Established*</label><input type="number" name="year_established" required placeholder="e.g., 2019"></div>
+    <div><label>Stock Symbol</label><input type="text" name="stock_symbol" placeholder="If public"></div>
+    <div><label>Website URL</label><input type="url" name="website_url"></div>
+    <div><label>Upload Logo</label><input type="file" name="logo_upload" accept="image/*"></div>
+    <div><label>Physical Address*</label><input type="text" name="physical_address" required placeholder="Must match EIN address"></div>
+    <div><label>Business Phone*</label><input type="tel" name="business_phone" required></div>
+    <div><label>Business Email*</label><input type="email" name="business_email" required></div>
+  </section>
+
+  <!-- Section 2: Authorized Representative -->
+  <section id="rep-info">
+    <h2>2. Authorized Representative</h2>
+    <div><label>Full Name*</label><input type="text" name="rep_name" required></div>
+    <div><label>Email Address*</label><input type="email" name="rep_email" required></div>
+    <div><label>Phone Number*</label><input type="tel" name="rep_phone" required></div>
+  </section>
+
+  <!-- Section 3: Messaging Compliance -->
+  <section id="messaging-compliance">
+    <h2>3. Messaging Compliance</h2>
+    <div><label>Privacy Policy URL</label><input type="url" name="privacy_policy_url" placeholder="Link or leave blank to generate"></div>
+    <div><label>Terms of Use URL</label><input type="url" name="terms_of_use_url" placeholder="Link or leave blank to generate"></div>
+    <div>
+      <label>Messaging Use Case(s)*</label>
+      <small>Select all that apply</small>
+      <div><input type="checkbox" name="use_case" value="Marketing"> Marketing</div>
+      <div><input type="checkbox" name="use_case" value="Customer Care"> Customer Care</div>
+      <div><input type="checkbox" name="use_case" value="OTP"> One-Time Passwords (OTP)</div>
+    </div>
+    <div><label>Estimated Monthly Message Volume*</label><input type="number" name="msg_volume" required placeholder="e.g. 1000"></div>
+  </section>
+
+  <!-- Section 4: Platform Setup -->
+  <section id="platform-setup">
+    <h2>4. TaxOffice.AI Setup Preferences</h2>
+    <div><label>Selected Plan*</label>
+      <select name="taxoffice_plan" required>
+        <option value="">Select Your Plan</option>
+        <option value="solo-practitioner">Solo Practitioner ($197/mo)</option>
+        <option value="small-firm">Small Firm ($297/mo)</option>
+        <option value="growth-pro">Growth Pro ($497/mo)</option>
+      </select>
+    </div>
+    <div id="jasmine-setup" style="display:none;">
+      <h3>Jasmine AI Assistant Setup</h3>
+      <div><label>Greeting Style*</label>
+        <select name="greeting_style">
+          <option value="">Select</option>
+          <option value="friendly">Friendly</option>
+          <option value="professional">Professional</option>
+          <option value="bilingual">Bilingual</option>
+          <option value="custom">Custom</option>
+        </select>
+      </div>
+      <div><label>Custom Greeting</label><textarea name="greeting_preference" rows="3" placeholder="How should Jasmine greet your tax clients?"></textarea></div>
+      <div><label>Languages Spoken*</label><input type="text" name="languages_spoken" placeholder="e.g., English, Spanish"></div>
+      <div><label>Escalation Types</label><input type="text" name="escalate_caller_types" placeholder="e.g., urgent tax deadlines, IRS inquiries"></div>
+    </div>
+    <div><label>Calendar Link*</label><input type="url" name="calendar_link" required placeholder="Your scheduling calendar for client appointments"></div>
+    <div><label>Follow-up Contact Name*</label><input type="text" name="follow_up_name" required></div>
+    <div><label>Follow-up Contact Email*</label><input type="email" name="follow_up_email" required></div>
+  </section>
+</form>
+
+<!-- Section 5: Next Steps -->
+<section id="next-steps">
+  <h2>5. Next Steps</h2>
+  <div id="submission-confirmation" class="success-box" style="display:none;">
+    <p>✅ Thank you! Your information has been submitted successfully.</p>
+    <p>🎉 Next → Book your onboarding call below!</p>
+  </div>
+
+  <div id="calendar-embed" style="display:none;">
+    <iframe src="https://link.4features.com/widget/booking/5NeTo1jOv20TNGPJvxbi" style="width: 100%;border:none;overflow: hidden;" scrolling="no" id="1FyD6lV52GAXznLYY5o4_1751223964554"></iframe><br><script src="https://link.4features.com/js/form_embed.js" type="text/javascript"></script>
+  </div>
+
+  <button type="submit" form="business-info-form" id="submit-all-forms-btn">Submit Information</button>
+</section>
+
+<footer>
+  <div style="text-align:center; padding:20px;">
+    <img src="images/MM_TaxOffice-05.png" alt="TaxOffice.AI Logo" style="max-width:100px; margin: 0 auto; display: block;">
+    <p>Powered by 4Features</p>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
 </html>
