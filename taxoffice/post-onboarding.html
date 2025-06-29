@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jasmine Post-Onboarding | 4Features</title>
-  <meta name="description" content="Congrats! You’ve completed Jasmine onboarding. Here’s what happens next with 4Features." />
+  <title>TaxOffice.AI Post-Onboarding | Powered by 4Features</title>
+  <meta name="description" content="Congrats! You've completed TaxOffice.AI onboarding. Here's what happens next with your automated tax practice." />
   <link rel="stylesheet" href="css/style.css" />
   <style>
     body {
@@ -44,49 +44,89 @@
     .cta-buttons a:hover {
       background-color: #4a435a;
     }
+    .plan-specific {
+      background-color: #e8f4fd;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 20px 0;
+      border-left: 4px solid #5C5470;
+    }
   </style>
 <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 <body>
-
-  <h1>🎉 You’re All Set with Jasmine!</h1>
-  <p>Thanks for completing your onboarding. Here’s what to expect next as we roll out your setup and help you launch with confidence.</p>
-
-  <!-- Embedded Jasmine Post-Onboarding Loom Video -->
+  <h1>🎉 Your Tax Practice is Now Automated!</h1>
+  <p>Thanks for completing your TaxOffice.AI onboarding. Here's what to expect next as we activate your automated tax practice and help you launch with confidence.</p>
+  
+  <!-- Embedded TaxOffice.AI Post-Onboarding Video -->
   <div class="video-container">
-    <iframe src="https://www.loom.com/embed/6b35a9a425ae497f91df376df192c873?sid=91dc935c-08af-439e-b17e-ee0ac7c87ad8"
+    <iframe src="https://player.vimeo.com/video/1097346639?badge=0&autopause=0&player_id=0&app_id=58479"
             frameborder="0"
-            webkitallowfullscreen
-            mozallowfullscreen
-            allowfullscreen>
+            allow="autoplay; fullscreen; picture-in-picture; clipboard-write"
+            title="TaxOffice.AI Setup Complete">
     </iframe>
   </div>
-
-  <h2>✅ What’s Next</h2>
+  
+  <h2>✅ What's Happening Now</h2>
   <ul>
-    <li>We’re configuring your <strong>reputation campaigns</strong> to get you fast wins</li>
-    <li>Your Jasmine settings will go live within the next 24–48 hours</li>
-    <li>We’ll monitor and optimize early interactions for top performance</li>
-    <li>You can reach out anytime if you have questions or ideas</li>
+    <li>We're configuring your <strong>tax practice automation</strong> for peak season readiness</li>
+    <li>Your TaxOffice.AI platform will be live within the next 24–48 hours</li>
+    <li>We'll optimize early client interactions specifically for tax professionals</li>
+    <li>You can reach out anytime if you have questions or need adjustments</li>
   </ul>
 
-  <h2>💬 Plug Into the 4Features Community</h2>
-  <p>Stay connected, learn best practices, and join others growing with Jasmine:</p>
+  <!-- Plan-Specific Next Steps -->
+  <div class="plan-specific">
+    <h3>Your Plan Features Going Live:</h3>
+    <div id="solo-features" style="display:none;">
+      <h4>Solo Practitioner Plan:</h4>
+      <ul>
+        <li>📅 <strong>Smart Scheduling</strong> - Automated appointment booking</li>
+        <li>📧 <strong>Unified Inbox</strong> - All client communications in one place</li>
+        <li>⭐ <strong>Google Review Booster</strong> - Automatic review requests</li>
+        <li>📋 <strong>Success Setup</strong> - Optimized workflows for solo practitioners</li>
+      </ul>
+    </div>
+    <div id="jasmine-features" style="display:none;">
+      <h4>Your Plan Includes Jasmine AI Assistant:</h4>
+      <ul>
+        <li>🤖 <strong>Jasmine AI Assistant</strong> - 24/7 bilingual call handling</li>
+        <li>📞 <strong>Never Miss Client Calls</strong> - During tax season or after hours</li>
+        <li>📱 <strong>SMS & Voice Integration</strong> - Complete communication automation</li>
+        <li>📊 <strong>Smart Analytics</strong> - Track client interactions and efficiency</li>
+      </ul>
+    </div>
+  </div>
 
+  <h2>💼 Connect with the Tax Professional Community</h2>
+  <p>Join other tax professionals automating their practices and sharing best strategies:</p>
   <div class="cta-buttons">
-    <a href="https://members.4features.com" target="_blank">🚀 Go to Members Platform</a>
+    <a href="https://members.4features.com" target="_blank">🚀 Access Members Platform</a>
     <a href="https://apps.apple.com/in/app/lead-connector/id1564302502" target="_blank">📱 iPhone App</a>
     <a href="https://play.google.com/store/apps/details?id=com.LeadConnector" target="_blank">📱 Android App</a>
   </div>
 
   <div style="margin-top: 30px;">
-    <a class="cta-buttons" href="index.html">← Back to Jasmine Welcome Page</a>
+    <a class="cta-buttons" href="index.html">← Back to TaxOffice.AI Welcome</a>
   </div>
 
   <footer style="text-align:center; padding:20px; margin-top:40px;">
-    <img src="images/jasmine-logo-placeholder.png" alt="Jasmine Logo" style="max-width:100px; display:block; margin:auto;">
+    <img src="images/MM_TaxOffice-06.png" alt="TaxOffice.AI Logo" style="max-width:100px; display:block; margin:auto;">
     <p>Powered by 4Features</p>
   </footer>
 
+  <script>
+    // Detect plan from URL parameter or local storage
+    const urlParams = new URLSearchParams(window.location.search);
+    const plan = urlParams.get('plan') || localStorage.getItem('taxoffice_plan') || 'jasmine';
+    
+    if (plan === 'solo-practitioner') {
+      document.getElementById('solo-features').style.display = 'block';
+      document.getElementById('jasmine-features').style.display = 'none';
+    } else {
+      document.getElementById('solo-features').style.display = 'none';
+      document.getElementById('jasmine-features').style.display = 'block';
+    }
+  </script>
 </body>
 </html>
